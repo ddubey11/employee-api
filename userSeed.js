@@ -9,7 +9,7 @@ const userRegister = async () => {
             name: "admin",
             email: "admin@abc.com",
             //password: hashPassword,
-            password: bcrypt.hashSync( "123456", 10 ),
+            password: bcrypt.hashSync( "admin", 10 ),
             role: "admin"
         } )
         await newUser.save()

@@ -1,4 +1,13 @@
+# Node modules and build artifacts
 node_modules/
-.env
 dist/
+
+# Environment variables
+.env
+
+# Logs
 *.log
+
+# file not upload for vercel
+auth.js
+authController.js

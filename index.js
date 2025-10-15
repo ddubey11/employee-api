@@ -16,11 +16,16 @@ const app = express();
 // ✅ Allow only your frontend domain
 const cors = require( 'cors' );
 
+const cors = require( 'cors' );
+
 app.use( cors( {
     origin: 'https://employee-frontend-pi-sand.vercel.app', // ✅ No trailing slash
-    methods: [ 'GET', 'POST' ],
-    credentials: true
+    methods: [ 'GET', 'POST', 'OPTIONS' ],
+    credentials: true,
+    allowedHeaders: [ 'Content-Type', 'Authorization' ]
 } ) );
+
+app.options( '*', cors() ); // ✅ Handles preflight requests
 
 app.use( express.json() );
 app.use( express.static( 'public/' ) );

@@ -14,8 +14,11 @@ connectToDatabase();
 const app = express();
 
 // ✅ Allow only your frontend domain
+const cors = require( 'cors' );
+
 app.use( cors( {
-    origin: 'https://employee-frontend-czml.vercel.app/',
+    origin: 'https://employee-frontend-pi-sand.vercel.app', // ✅ No trailing slash
+    methods: [ 'GET', 'POST' ],
     credentials: true
 } ) );
 

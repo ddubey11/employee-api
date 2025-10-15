@@ -1,5 +1,4 @@
 import express from 'express';
-import cors from 'cors';
 import authRoutes from './routes/auth.js';
 import departmentRouter from './routes/department.js';
 import employeeRouter from './routes/employee.js';

@@ -15,7 +15,7 @@ const app = express();
 
 // ✅ Allow only your frontend domain
 app.use( cors( {
-    origin: 'https://employee-frontend-tan.vercel.app',
+    origin: 'https://employee-frontend-czml.vercel.app/',
     credentials: true
 } ) );
 
